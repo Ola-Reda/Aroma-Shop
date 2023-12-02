@@ -450,50 +450,46 @@ main .site-info button:hover {
 /*start section blog*/
 .blog {
     margin-top: 80px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .blog .card .card-body {
     padding: 25px 20px 20px 0px;
 }
 
-.blog .card-body a {
+.blog .card-body .body-top a {
     color: #777;
     font-size: 14px;
-    text-decoration: none;
     padding-right: 25px;
 }
 
-.blog .card-body a i.fa-smile {
-    padding-right: 5px;
-}
-
 .blog .card-body h4 {
-    margin-top: 10px;
+    margin-top: 6px;
 }
 
 .blog .card-body h4 a {
     color: black;
     font-size: 20px;
-    transition: all .5s ease-in-out;
+    transition: .4s ease-in;
 }
 
 .blog .card-body p {
     color: #777;
     font-size: 15px;
-    margin-top: 15px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .blog .card-link {
     color: black;
     font-size: 15px;
-    transition: all .5s ease-in-out;
+    transition: .4s ease-in;
 }
 
-.blog .card-link i {
+.blog .card-link svg {
     font-size: 13px;
     padding-left: 3px;
-    transition: all .5s ease-in-out;
+    transition: .4s ease-in;
 }
 
 .blog .card:hover h4 a,
@@ -501,33 +497,36 @@ main .site-info button:hover {
     color: var(--mainColor);
 }
 
-.blog .card:hover .card-link i {
+.blog .card:hover .card-link svg {
     color: var(--mainColor);
     padding-left: 10px;
 }
 /*end section blog*/
 /*start section subscribe*/
 .subscribe .content {
+    background: #fff;
     padding-top: 80px;
     padding-bottom: 100px;
     position: relative;
     top: 100px;
-    background: #fff;
     border-radius: 5px;
     box-shadow: 0px -5px 20px 0px rgb(56 74 235 / 10%);
 }
+
 .subscribe .content h3 {
     font-size: 36px;
     font-weight: 600;
 }
+
 .subscribe .content p {
     color: #777;
     font-size: 15px;
     margin-top: 16px;
     margin-bottom: 50px;
 }
+
 .subscribe .content input {
-    width: 350px;
+    width: 360px;
     color: #999;
     font-size: 14px;
     border: 1px solid #eee;
@@ -535,7 +534,23 @@ main .site-info button:hover {
     outline: none;
     margin-right: 10px;
     padding: 14px;
+    caret-color: var(--mainColor);
+    transition: .4s ease-in;
 }
+
+.subscribe .content input:focus {
+    border-color: var(--mainColor);
+}
+
+.subscribe .content input::placeholder {
+    opacity: 1;
+    transition: .4s ease-in;
+}
+
+.subscribe .content input:focus::placeholder {
+    opacity: 0;
+}
+
 .subscribe .content button {
     background-color: var(--mainColor);
     color: white;
@@ -544,31 +559,43 @@ main .site-info button:hover {
     border-radius: 30px;
     border: 1px solid var(--mainColor);
     padding: 12px 31px;
-    transition: all .4s ease-in;
+    transition: .4s ease-in;
 }
+
 .subscribe .content button:hover {
     background: transparent;
     color: black;
 }
-@media (max-width:1000px) {
+
+@media (max-width: 1000px) {
     .subscribe .content {
         padding-top: 40px;
         padding-bottom: 70px;
         top: 0px;
     }
 }
-@media (max-width:991px) {
+
+@media (max-width: 768px) {
     .subscribe .content h3 {
         font-size: 28px;
     }
-}
-@media (max-width:800px) {
-    .subscribe .content input {
-        width: 200px;
-        padding: 12px;
+
+    .subscribe .content p {
+        margin-bottom: 34px;
     }
-    .subscribe .content button {
-        padding: 10px 21px;
+
+    .subscribe .content form {
+        flex-direction: column;
+    }
+
+    .subscribe .content input {
+        margin-bottom: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .subscribe .content input {
+        width: 240px;
     }
 }
 /*end section subscribe*/
@@ -578,58 +605,70 @@ main .site-info button:hover {
     padding-top: 190px;
     padding-bottom: 70px;
 }
+
 .top-footer h4 {
     color: white;
     margin-bottom: 25px;
 }
+
 .top-footer .mission p {
     color: #7b838a;
     font-size: 15px;
     line-height: 23px;
 }
+
 .top-footer .links li {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 }
+
 .top-footer .links li a {
     color: #7b838a;
     transition: all 0.4s ease-in;
 }
+
 .top-footer .links a:hover {
     color: var(--mainColor);
     padding-left: 5px;
 }
+
 .top-footer .gallery img {
     margin: 5px;
 }
+
 .top-footer .contact li {
     margin-top: 15px;
 }
+
 .top-footer .contact p {
     display: inline-block;
     color: white;
     margin-bottom: 0px;
 }
-.top-footer .contact i {
+
+.top-footer .contact svg {
     background: var(--mainColor);
     color: white;
     padding: 7px;
     border-radius: 20px;
     margin-right: 10px;
 }
+
 .top-footer .contact span {
     display: block;
     color: #7b838a;
     margin-left: 40px;
 }
-@media (max-width:1000px) {
+
+@media (max-width: 1000px) {
     .top-footer {
         padding-top: 50px;
+        padding-bottom: 55px;
     }
 }
+
 @media (max-width:991px) {
     .top-footer h4 {
-        font-size: 18px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
     .top-footer .mission,
     .links,
