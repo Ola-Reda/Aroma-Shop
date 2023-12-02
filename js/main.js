@@ -1,12 +1,12 @@
 $(document).ready(function() {
-    //navbar
-    // $(window).on("scroll", function() {
-    //     if (this.scrollY > 60) {
-    //         $("header").addClass("sticky")
-    //     } else {
-    //         $("header").removeClass("sticky")
-    //     }
-    // })
+    navbar
+    $(window).on("scroll", function() {
+        if (this.scrollY > 60) {
+            $("header").addClass("sticky")
+        } else {
+            $("header").removeClass("sticky")
+        }
+    })
 
 
     //section product
@@ -29,19 +29,6 @@ $(document).ready(function() {
             }
         }
     });
-
-
-
-    // $(".silde").hover(function() {
-    //     $(".carousel-link").slideToggle(function() {
-    //         $('this').animate({
-    //             bottom: "100px",
-    //             opacity: "0"
-    //         }, 200);
-    //     });
-    // });
-
-
 
 
     //section best
