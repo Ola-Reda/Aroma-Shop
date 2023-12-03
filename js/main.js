@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    navbar
+    //navbar
     $(window).on("scroll", function() {
         if (this.scrollY > 60) {
             $("header").addClass("sticky")
